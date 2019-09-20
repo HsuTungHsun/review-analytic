@@ -31,9 +31,21 @@ print(new[0])
 
 #filter word
 good = []
-for d in data:
+for d in data:   #把每一筆留言叫出來
 	if 'good' in d:  #if string 'good' in reviews then
 	#if "True/False" then
 		good.append(d) #make 'good' into good list
 print('There are: ', len(good), 'piece of reviews contain good')
 print(good[0])   #print first list contain 'good'
+
+#list comprehension清單快寫法
+#This code is equal to filter word 'good'
+#↓ output=[(number-1) for number in reference if number % 2 ==0]
+good1 = [d for d in data if 'good' in d]
+#        ↑This d equal to good.append(d) 
+print(good1[0])   #print first list contain 'good'
+
+#filter bad from all word
+bad = ['bad' in d     for d in data]
+#       b     ool      1million datta
+print(bad)
