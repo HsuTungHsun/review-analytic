@@ -18,8 +18,7 @@ for d in data:   # d is string
 
 print('Avg Reviews length is: ', sum_len/len(data))
 
-#篩選
-
+#filter
 new = []
 for d in data: #d is string , data = 1million piece of data list
 	if len(d) < 100:  #len(d) = length of d < 100
@@ -29,3 +28,12 @@ for d in data: #d is string , data = 1million piece of data list
 print('There are :', len(new), 'piece of data string length below 100')
 #↑ print after for loop end
 print(new[0])
+
+#filter word
+good = []
+for d in data:
+	if 'good' in d:  #if string 'good' in reviews then
+	#if "True/False" then
+		good.append(d) #make 'good' into good list
+print('There are: ', len(good), 'piece of reviews contain good')
+print(good[0])   #print first list contain 'good'
